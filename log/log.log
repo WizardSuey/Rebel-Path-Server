@@ -1,0 +1,11 @@
+2025-08-07 01:21:19,407 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 01:21:32,480 INFO New connection from ('192.168.3.3', 55437)
+2025-08-07 01:22:08,551 INFO New connection from ('89.189.179.132', 55860)
+2025-08-07 01:22:08,553 INFO Getting data: {"code":1,"Email":"d","Username":"d","Password":"d"} from ('89.189.179.132', 55860)
+2025-08-07 01:22:47,098 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 01:23:05,594 INFO New connection from ('89.189.179.132', 45191)
+2025-08-07 01:23:05,596 INFO Getting data: {"code":1,"Email":"qwe","Username":"qwe","Password":"qwe"} from ('89.189.179.132', 45191)

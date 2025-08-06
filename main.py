@@ -3,9 +3,17 @@ import select
 import yaml
 import json
 import asyncio
+import sys
+import logging
 
-from requestCodes import RequestCodes
-from registerUser import RegisterUser
+from requestCode import RequestCode
+from src.registerUser import RegisterUser
+from src.db import Db
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+logging.basicConfig(level=logging.INFO, filename="log/log.log", filemode="a", format="%(asctime)s %(levelname)s %(message)s")
 
 class Server:
     def __init__(self, address: str, port: str):
@@ -22,7 +30,7 @@ class Server:
         try:
             self.socket.bind((self.address, self.port))
         except socket.error as e:
-            print(str(e))
+            logger.error(str(e))
             exit(1)
 
         self.socket.listen(self.__MAX_CONNECTIONS)
@@ -36,7 +44,7 @@ class Server:
                 connection, client_address = resource.accept()
                 connection.setblocking(False)
                 self.__INPUTS.append(connection)
-                print(f"New connection from {client_address}")
+                logger.info(f"New connection from {client_address}")
 
             # Если событие исходит не от серверного сокета, но сработало прерывание на наполнение входного буффера
             else:
@@ -46,16 +54,37 @@ class Server:
 
                 # Если сокет был закрыт на другой стороне
                 except ConnectionResetError:
-                    pass
+                    logger.info(f"Connection closed by {resource.getpeername()}")
+                    self.__clear_resource(resource)
 
                 if dataJsonStr:
-                    print(f"Getting data: {str(dataJsonStr)} from {resource.getpeername()}")
+                    logger.info(f"Getting data: {str(dataJsonStr)} from {resource.getpeername()}")
 
                     try:
+                        """ Парсим строку json и дойстаём от туда код запроса и данные """
                         dataJson: dict = json.loads(dataJsonStr)
-                        print(dataJson)
+
+                        #################################
+                        # Переключатель запросов
+                        if dataJson["code"] is RequestCode.REGISTER_USER:
+                            userAddr = resource.getpeername()
+                            registerUser = RegisterUser(userAddr, dataJson["Email"], dataJson["Username"], dataJson["Password"])
+                            statusCode = asyncio.run(registerUser.registerUser())
+
+                            sendData = {
+                                "code": statusCode
+                            }
+
+                            sendDataJson = json.dumps(sendData)
+                            try:
+                                resource.send(bytes(sendDataJson, encoding="utf-8"))
+                            except OSError:
+                                self.__clear_resource(resource)
+                        # Переключатель запросов
+                        #################################
+
                     except json.JSONDecodeError:
-                        print("Invalid json")
+                        logger.error(f"Invalid json from client {resource.getpeername()}")
                         continue
 
                     # Говорим о том, что мы будем еще и писать в данный сокет
@@ -90,13 +119,13 @@ class Server:
         except Exception:
             pass
 
-        print(f"Closing connection {peer}")
+        logger.info(f"Closing connection {peer}")
 
     def launch(self) -> None:
         self.__init_socket()
         self.__INPUTS.append(self.socket)
 
-        print(f"Server started on {self.address}:{self.port}\nTo stop the server press Ctrl+C\n")
+        logger.info(f"Server started on {self.address}:{self.port}\nTo stop the server press Ctrl+C\n")
 
         try:
             while self.__INPUTS:
@@ -104,7 +133,17 @@ class Server:
                 self.__handle_readables(readables, self.socket)
                 self.handle_writables(writables)
         except KeyboardInterrupt:
-            print("\nServer stopped")
+            logger.info("\nServer stopped")
+
+    def init_db(self):
+        config = Db.open_config("config/db.yaml")
+        db = Db(host=config["HOST"], port=config["PORT"], user=config["USER"], password=config["PASSWORD"], database=config["DATABASE"])
+        asyncio.run(db.init_db())
+
+    def seed_db(self):
+        config = Db.open_config("config/db.yaml")
+        db = Db(host=config["HOST"], port=config["PORT"], user=config["USER"], password=config["PASSWORD"], database=config["DATABASE"])
+        asyncio.run(db.seed_db())
 
     @staticmethod
     def open_config(path: str) -> dict:
@@ -116,4 +155,14 @@ class Server:
 if __name__ == "__main__":
     config = Server.open_config("config/server.yaml")
     server = Server(config["ADDRESS"], config["PORT"])
+    for i, arg in enumerate(sys.argv):
+        if arg == "--version":
+            print(config["VERSION"])
+            exit(0)
+        if arg == "--init_db":
+            server.init_db()
+            exit(0)
+        if arg == "--seed_db":
+            server.seed_db()
+            exit(0)
     server.launch()
