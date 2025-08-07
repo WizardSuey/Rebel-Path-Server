@@ -1,11 +1,193 @@
-2025-08-07 01:21:19,407 INFO Server started on 192.168.3.3:53144
+2025-08-07 14:40:37,873 INFO Server started on 192.168.3.3:53144
 To stop the server press Ctrl+C
 
-2025-08-07 01:21:32,480 INFO New connection from ('192.168.3.3', 55437)
-2025-08-07 01:22:08,551 INFO New connection from ('89.189.179.132', 55860)
-2025-08-07 01:22:08,553 INFO Getting data: {"code":1,"Email":"d","Username":"d","Password":"d"} from ('89.189.179.132', 55860)
-2025-08-07 01:22:47,098 INFO Server started on 192.168.3.3:53144
+2025-08-07 14:40:47,504 INFO New connection from ('89.189.179.132', 50545)
+2025-08-07 14:40:47,507 INFO Getting data: {"code":1,"Email":"","Username":"","Password":""} from ('89.189.179.132', 50545)
+2025-08-07 14:40:47,507 INFO {'code': 1, 'Email': '', 'Username': '', 'Password': ''}
+2025-08-07 14:41:14,958 INFO Server started on 192.168.3.3:53144
 To stop the server press Ctrl+C
 
-2025-08-07 01:23:05,594 INFO New connection from ('89.189.179.132', 45191)
-2025-08-07 01:23:05,596 INFO Getting data: {"code":1,"Email":"qwe","Username":"qwe","Password":"qwe"} from ('89.189.179.132', 45191)
+2025-08-07 14:41:18,298 INFO New connection from ('89.189.179.132', 51010)
+2025-08-07 14:41:18,302 INFO Getting data: {"code":1,"Email":"","Username":"","Password":""} from ('89.189.179.132', 51010)
+2025-08-07 14:43:17,041 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 14:43:23,739 INFO New connection from ('89.189.179.132', 52756)
+2025-08-07 14:43:23,741 INFO Getting data: {"code":1,"Email":"","Username":"","Password":""} from ('89.189.179.132', 52756)
+2025-08-07 14:43:48,354 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 14:43:50,306 INFO New connection from ('89.189.179.132', 53152)
+2025-08-07 14:43:50,309 INFO Getting data: {"code":1,"Email":"","Username":"","Password":""} from ('89.189.179.132', 53152)
+2025-08-07 14:43:50,310 INFO Start registration new user - ('89.189.179.132', 53152) with email: , username: , password: 
+2025-08-07 14:43:50,311 INFO {'code': 300}
+2025-08-07 14:44:18,220 INFO New connection from ('89.189.179.132', 53540)
+2025-08-07 14:44:18,223 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"","Password":""} from ('89.189.179.132', 53540)
+2025-08-07 14:44:18,223 INFO Start registration new user - ('89.189.179.132', 53540) with email: dorogino@gmail.com, username: , password: 
+2025-08-07 14:50:21,860 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 14:50:27,050 INFO New connection from ('89.189.179.132', 58548)
+2025-08-07 14:50:27,053 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"","Password":""} from ('89.189.179.132', 58548)
+2025-08-07 14:50:27,054 INFO Start registration new user - ('89.189.179.132', 58548) with email: dorogino@gmail.com, username: , password: 
+2025-08-07 14:50:54,357 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 14:50:57,763 INFO New connection from ('89.189.179.132', 58972)
+2025-08-07 14:50:57,766 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"","Password":""} from ('89.189.179.132', 58972)
+2025-08-07 14:50:57,767 INFO Start registration new user - ('89.189.179.132', 58972) with email: dorogino@gmail.com, username: , password: 
+2025-08-07 14:51:18,044 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 14:51:19,997 INFO New connection from ('89.189.179.132', 55300)
+2025-08-07 14:51:20,000 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"","Password":""} from ('89.189.179.132', 55300)
+2025-08-07 14:51:20,001 INFO Start registration new user - ('89.189.179.132', 55300) with email: dorogino@gmail.com, username: , password: 
+2025-08-07 14:51:26,146 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 14:51:27,994 INFO New connection from ('89.189.179.132', 55364)
+2025-08-07 14:51:27,996 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"","Password":""} from ('89.189.179.132', 55364)
+2025-08-07 14:51:27,997 INFO Start registration new user - ('89.189.179.132', 55364) with email: dorogino@gmail.com, username: , password: 
+2025-08-07 14:51:28,103 INFO {'code': 301}
+2025-08-07 14:55:17,029 INFO New connection from ('89.189.179.132', 62548)
+2025-08-07 14:55:17,032 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"","Password":""} from ('89.189.179.132', 62548)
+2025-08-07 14:55:17,033 INFO Start registration new user - ('89.189.179.132', 62548) with email: dorogino@gmail.com, username: , password: 
+2025-08-07 14:55:17,088 INFO {'code': 301}
+2025-08-07 14:55:25,084 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 14:55:27,955 INFO New connection from ('89.189.179.132', 62699)
+2025-08-07 14:55:27,958 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"","Password":""} from ('89.189.179.132', 62699)
+2025-08-07 14:55:27,959 INFO Start registration new user - ('89.189.179.132', 62699) with email: dorogino@gmail.com, username: , password: 
+2025-08-07 14:55:28,019 INFO {'code': 301}
+2025-08-07 15:10:54,142 INFO Closing connection ('89.189.179.132', 62699)
+2025-08-07 17:09:39,607 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 17:09:59,041 INFO New connection from ('89.189.179.132', 56563)
+2025-08-07 17:09:59,044 INFO Getting data: {"code":1,"Email":"d","Username":"","Password":""} from ('89.189.179.132', 56563)
+2025-08-07 17:09:59,046 INFO Start registration new user - ('89.189.179.132', 56563) with email: d, username: , password: 
+2025-08-07 17:09:59,047 INFO {'code': 300}
+2025-08-07 17:10:10,739 INFO New connection from ('89.189.179.132', 56730)
+2025-08-07 17:10:10,742 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"","Password":""} from ('89.189.179.132', 56730)
+2025-08-07 17:10:10,742 INFO Start registration new user - ('89.189.179.132', 56730) with email: dorogino@gmail.com, username: , password: 
+2025-08-07 17:10:32,325 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 17:10:36,849 INFO New connection from ('89.189.179.132', 56398)
+2025-08-07 17:10:36,852 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"","Password":""} from ('89.189.179.132', 56398)
+2025-08-07 17:10:36,853 INFO Start registration new user - ('89.189.179.132', 56398) with email: dorogino@gmail.com, username: , password: 
+2025-08-07 17:10:37,029 INFO {'code': 303}
+2025-08-07 17:11:21,133 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 17:11:25,345 INFO New connection from ('89.189.179.132', 57182)
+2025-08-07 17:11:25,348 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"","Password":""} from ('89.189.179.132', 57182)
+2025-08-07 17:11:25,349 INFO Start registration new user - ('89.189.179.132', 57182) with email: dorogino@gmail.com, username: , password: 
+2025-08-07 17:11:25,454 INFO {'code': 304}
+2025-08-07 17:11:38,265 INFO New connection from ('89.189.179.132', 57728)
+2025-08-07 17:11:38,268 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":""} from ('89.189.179.132', 57728)
+2025-08-07 17:11:38,269 INFO Start registration new user - ('89.189.179.132', 57728) with email: dorogino@gmail.com, username: SteBoomer, password: 
+2025-08-07 17:11:38,377 INFO {'code': 306}
+2025-08-07 17:11:50,745 INFO New connection from ('89.189.179.132', 50792)
+2025-08-07 17:11:50,748 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"qw","Password":""} from ('89.189.179.132', 50792)
+2025-08-07 17:11:50,749 INFO Start registration new user - ('89.189.179.132', 50792) with email: dorogino@gmail.com, username: qw, password: 
+2025-08-07 17:11:50,852 INFO {'code': 304}
+2025-08-07 17:12:10,402 INFO New connection from ('89.189.179.132', 51054)
+2025-08-07 17:12:10,405 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd","Password":""} from ('89.189.179.132', 51054)
+2025-08-07 17:12:10,406 INFO Start registration new user - ('89.189.179.132', 51054) with email: dorogino@gmail.com, username: dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd, password: 
+2025-08-07 17:12:10,511 INFO {'code': 305}
+2025-08-07 17:12:17,729 INFO Closing connection ('89.189.179.132', 57728)
+2025-08-07 17:12:17,745 INFO Closing connection ('89.189.179.132', 50792)
+2025-08-07 17:12:33,425 INFO New connection from ('89.189.179.132', 51341)
+2025-08-07 17:12:33,428 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"steboomer","Password":""} from ('89.189.179.132', 51341)
+2025-08-07 17:12:33,429 INFO Start registration new user - ('89.189.179.132', 51341) with email: dorogino@gmail.com, username: steboomer, password: 
+2025-08-07 17:12:33,529 INFO {'code': 306}
+2025-08-07 17:14:31,324 INFO Closing connection ('89.189.179.132', 57182)
+2025-08-07 17:14:31,344 INFO Closing connection ('89.189.179.132', 51054)
+2025-08-07 17:14:31,353 INFO Closing connection ('89.189.179.132', 51341)
+2025-08-07 22:35:40,774 INFO New connection from ('89.189.179.132', 63515)
+2025-08-07 22:35:40,778 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":"48BitColor48"} from ('89.189.179.132', 63515)
+2025-08-07 22:35:40,791 INFO Start registration new user - ('89.189.179.132', 63515) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 22:35:40,937 ERROR Db.hash_password() missing 1 required positional argument: 'password'
+2025-08-07 22:35:40,937 INFO {'code': 400}
+2025-08-07 22:37:57,835 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 22:37:59,877 INFO New connection from ('89.189.179.132', 63774)
+2025-08-07 22:37:59,880 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":"48BitColor48"} from ('89.189.179.132', 63774)
+2025-08-07 22:37:59,881 INFO Start registration new user - ('89.189.179.132', 63774) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 22:37:59,983 INFO aa9dccd8938dca5d498ad1f990a24f4d4498881bdeef3c2b488e5c9fd42cc8af:2554c3ae92084cf7ab289686bc2c0068
+2025-08-07 22:38:00,042 ERROR столбец "password" в таблице "users" не существует
+2025-08-07 22:38:00,043 INFO {'code': 400}
+2025-08-07 22:40:08,508 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 22:40:13,204 INFO New connection from ('89.189.179.132', 49504)
+2025-08-07 22:40:13,206 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":"48BitColor48"} from ('89.189.179.132', 49504)
+2025-08-07 22:40:13,207 INFO Start registration new user - ('89.189.179.132', 49504) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 22:40:13,382 INFO {'code': 200}
+2025-08-07 22:40:52,583 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 22:40:54,982 INFO New connection from ('89.189.179.132', 50288)
+2025-08-07 22:40:54,985 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":"48BitColor48"} from ('89.189.179.132', 50288)
+2025-08-07 22:40:54,986 INFO Start registration new user - ('89.189.179.132', 50288) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 22:40:55,145 INFO User registered - ('89.189.179.132', 50288) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 22:40:55,145 INFO {'code': 200}
+2025-08-07 23:29:52,747 INFO Closing connection ('89.189.179.132', 50288)
+2025-08-07 23:32:30,846 INFO New connection from ('89.189.179.132', 1369)
+2025-08-07 23:32:30,850 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":"48BitColor48"} from ('89.189.179.132', 1369)
+2025-08-07 23:32:30,857 INFO Start registration new user - ('89.189.179.132', 1369) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 23:32:30,925 INFO {'code': 301}
+2025-08-07 23:33:21,765 INFO Closing connection ('89.189.179.132', 1369)
+2025-08-07 23:34:04,504 INFO New connection from ('89.189.179.132', 1145)
+2025-08-07 23:34:04,507 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":"48BitColor48"} from ('89.189.179.132', 1145)
+2025-08-07 23:34:04,508 INFO Start registration new user - ('89.189.179.132', 1145) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 23:34:04,660 INFO User registered - ('89.189.179.132', 1145) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 23:34:04,660 INFO {'code': 200}
+2025-08-07 23:34:04,661 INFO Closing connection ('89.189.179.132', 1145)
+2025-08-07 23:35:21,543 INFO New connection from ('89.189.179.132', 58400)
+2025-08-07 23:35:21,546 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":"48BitColor48"} from ('89.189.179.132', 58400)
+2025-08-07 23:35:21,546 INFO Start registration new user - ('89.189.179.132', 58400) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 23:35:21,700 INFO User registered - ('89.189.179.132', 58400) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 23:35:21,701 INFO {'code': 200}
+2025-08-07 23:42:12,320 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 23:42:40,161 INFO New connection from ('89.189.179.132', 1346)
+2025-08-07 23:42:40,164 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":"48BitColor48"} from ('89.189.179.132', 1346)
+2025-08-07 23:42:40,165 INFO Start registration new user - ('89.189.179.132', 1346) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 23:43:42,799 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 23:43:49,634 INFO New connection from ('89.189.179.132', 1298)
+2025-08-07 23:43:49,638 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":"48BitColor48"} from ('89.189.179.132', 1298)
+2025-08-07 23:43:49,638 INFO Start registration new user - ('89.189.179.132', 1298) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 23:43:49,786 INFO User registered - ('89.189.179.132', 1298) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 23:43:49,787 INFO Sending data: {"code": 200} to ('89.189.179.132', 1298)
+2025-08-07 23:43:49,787 INFO Closing connection ('89.189.179.132', 1298)
+2025-08-07 23:45:54,279 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 23:45:58,468 INFO New connection from ('89.189.179.132', 50171)
+2025-08-07 23:45:58,471 INFO Getting data: {"code":1,"Email":"dorogino@gmail.com","Username":"SteBoomer","Password":"48BitColor48"} from ('89.189.179.132', 50171)
+2025-08-07 23:45:58,472 INFO Start registration new user - ('89.189.179.132', 50171) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 23:45:58,726 INFO User registered - ('89.189.179.132', 50171) with email: dorogino@gmail.com, username: SteBoomer, password: 48BitColor48
+2025-08-07 23:45:58,726 INFO Sending data: {"code": 200} to ('89.189.179.132', 50171)
+2025-08-07 23:48:54,790 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-07 23:49:05,479 INFO New connection from ('89.189.179.132', 52607)
+2025-08-07 23:49:05,482 INFO Getting data: {"code":1,"Email":"","Username":"","Password":""} from ('89.189.179.132', 52607)
+2025-08-07 23:49:05,483 INFO Start registration new user - ('89.189.179.132', 52607) with email: , username: , password: 
+2025-08-07 23:49:05,484 INFO Sending data: {"code": 300} to ('89.189.179.132', 52607)
+2025-08-07 23:49:05,485 INFO Closing connection ('89.189.179.132', 52607)
+2025-08-08 00:00:54,441 INFO Server started on 192.168.3.3:53144
+To stop the server press Ctrl+C
+
+2025-08-08 00:00:58,814 INFO New connection from ('89.189.179.132', 61517)
+2025-08-08 00:00:58,826 INFO Getting data: {"code":1,"Email":"","Username":"","Password":""} from ('89.189.179.132', 61517)
+2025-08-08 00:00:58,827 INFO Start registration new user - ('89.189.179.132', 61517) with email: , username: , password: 
+2025-08-08 00:00:58,828 INFO Sending data: {"code": 300} to ('89.189.179.132', 61517)
+2025-08-08 00:00:58,828 INFO Closing connection ('89.189.179.132', 61517)

@@ -27,7 +27,6 @@ class Db:
                 password=self.password,
                 database=self.database
             )
-            print("Connection to Database successful")
             return conn
         except asyncpg.exceptions.ClientCannotConnectError as e:
             print(e)
@@ -39,7 +38,6 @@ class Db:
         except Exception as e:
             print(e)
             pass
-        print("Connection to Database closed")
 
     async def init_db(self) -> None:
         connection = await self.connect()
@@ -48,9 +46,9 @@ class Db:
             schema = f.read()
         try:
             await connection.execute(schema)
-            print("Database initialized successfully")
+            logger.info("Database initialized successfully")
         except Exception as e:
-            print("Database initialization failed")
+            logger.error("Database initialization failed")
             print(e)
         await self.close(connection)
 
@@ -61,9 +59,9 @@ class Db:
             seed = f.read()
         try:
             await connection.execute(seed)
-            print("Database seeded successfully")
+            logger.info("Database seeded successfully")
         except Exception as e:
-            print("Database seeding failed")
+            logger.error("Database seeding failed")
             print(e)
         await self.close(connection)
 

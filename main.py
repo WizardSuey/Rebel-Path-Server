@@ -6,7 +6,7 @@ import asyncio
 import sys
 import logging
 
-from requestCode import RequestCode
+from src.requestCode import RequestCode
 from src.registerUser import RegisterUser
 from src.db import Db
 
@@ -15,10 +15,18 @@ logger.setLevel(logging.INFO)
 
 logging.basicConfig(level=logging.INFO, filename="log/log.log", filemode="a", format="%(asctime)s %(levelname)s %(message)s")
 
+HELP_STRING = "\n\n[Options]:\n\n\
+--version: Print version\n\
+--help: Print help\n\
+--init_db: inizialize database\n\
+--seed_db: seed database\n\
+--launch: launch server\n\
+"
+
 class Server:
-    def __init__(self, address: str, port: str):
+    def __init__(self, address: str, port: int):
         self.address: str = address
-        self.port: str = port
+        self.port: int = port
         self.socket: socket.socket = None
         self.__MAX_CONNECTIONS = 10
         self.__INPUTS = []
@@ -54,11 +62,15 @@ class Server:
 
                 # Если сокет был закрыт на другой стороне
                 except ConnectionResetError:
-                    logger.info(f"Connection closed by {resource.getpeername()}")
                     self.__clear_resource(resource)
+                    continue
 
                 if dataJsonStr:
                     logger.info(f"Getting data: {str(dataJsonStr)} from {resource.getpeername()}")
+
+                    # Говорим о том, что мы будем еще и писать в данный сокет
+                    if resource not in self.__OUTPUTS:
+                        self.__OUTPUTS.append(resource)
 
                     try:
                         """ Парсим строку json и дойстаём от туда код запроса и данные """
@@ -66,30 +78,29 @@ class Server:
 
                         #################################
                         # Переключатель запросов
-                        if dataJson["code"] is RequestCode.REGISTER_USER:
+                        if dataJson["code"] == RequestCode.REGISTER_USER.value:
                             userAddr = resource.getpeername()
                             registerUser = RegisterUser(userAddr, dataJson["Email"], dataJson["Username"], dataJson["Password"])
                             statusCode = asyncio.run(registerUser.registerUser())
 
                             sendData = {
-                                "code": statusCode
+                                "code": statusCode.value
                             }
 
                             sendDataJson = json.dumps(sendData)
+                            logger.info(f"Sending data: {str(sendDataJson)} to {resource.getpeername()}")
                             try:
                                 resource.send(bytes(sendDataJson, encoding="utf-8"))
                             except OSError:
                                 self.__clear_resource(resource)
+                                continue
+                            self.__clear_resource(resource)
                         # Переключатель запросов
                         #################################
 
                     except json.JSONDecodeError:
                         logger.error(f"Invalid json from client {resource.getpeername()}")
                         continue
-
-                    # Говорим о том, что мы будем еще и писать в данный сокет
-                    if resource not in self.__OUTPUTS:
-                        self.__OUTPUTS.append(resource)
                 
                 # Если данных нет, ничего не делаем
                 else:
@@ -100,7 +111,7 @@ class Server:
         """  Данное событие возникает когда в буффере на запись освобождается место """
         for resource in writables:
             try:
-                resource.send(bytes("Hello from server!", encoding="utf-8"))
+                pass
             except OSError:
                 self.__clear_resource(resource)
 
@@ -155,14 +166,21 @@ class Server:
 if __name__ == "__main__":
     config = Server.open_config("config/server.yaml")
     server = Server(config["ADDRESS"], config["PORT"])
+    if len(sys.argv) == 1:
+        print("[Usage]: python main.py [options]\n use --help for more info")
+        exit(0)
     for i, arg in enumerate(sys.argv):
         if arg == "--version":
             print(config["VERSION"])
             exit(0)
+        if arg == "--help":
+            print(HELP_STRING)
+            exit(0)
+        if arg == "--launch":
+            server.launch()
         if arg == "--init_db":
             server.init_db()
             exit(0)
         if arg == "--seed_db":
             server.seed_db()
             exit(0)
-    server.launch()
